@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics</title>
+    <!--Link to the external CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--This is called Internal CSS: Defined within a <style> tag inside the <head> section of an HTML document; it styles the entire page.-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!--This is called Inline CSS: Applied directly within an HTML element using the style attribute; it affects only that specific tag.-->
+    <h1 style="color: aqua;">CSS Basics</h1> 
+    <p class="description">CSS serves as the stylistic engine of the web, integrated via Inline attributes for specific tweaks, Internal blocks for single-page logic, or External stylesheets for scalable, site-wide design. To target elements effectively, we utilize a hierarchy of Selectors: basic types for broad strokes, Combinators (Child/Descendant) to define structural relationships, and Pseudo-selectors to style dynamic states or specific parts of an element.</p>
+    <div class="main">
+        I am a div
+        <article>
+            <p>I am a para inside div(class: main)
+                <i>I'm a child of para written in Italics</i>
+            </p>
+        </article>
+    </div>
+
+    <div id="part1">
+        <p>I am a para which is the direct child of div(id: part1)</p>
+    </div>
+
+    <div id="part2">
+        <p>I am the first child of the div(id: part2)</p>
+        <p>I am the second child of the div(id: part2)</p>
+        <p>I am the third child of the div(id: part2)</p>
+    </div>
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.facebook.com">Go to Facebook</a>
+</body>
+</html>
