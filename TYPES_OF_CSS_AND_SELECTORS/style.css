@@ -1,0 +1,74 @@
+/* This is called External CSS: Written in a separate .css file and linked to the HTML via a <link> tag; it allows you to style multiple pages at once. */
+
+body {
+    padding: 50px;
+    background-color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Element Selector  */
+p {
+    font-size: large;
+    color: aliceblue;
+    background-color: grey;
+}
+
+/* Class Selector  */
+.main {
+    background-color: pink;
+    margin: 10px;
+}
+
+/* Id Selector */
+#part1 {
+    margin: 10px;
+}
+
+/* CHILD SELECTOR: Selects only the immediate children of a parent element, ignoring nested grandchildren. */
+#part1>p {
+    /* Target only <p> that are direct children of <div>*/
+    color: blue;
+    background-color: orange;
+}
+
+/* DESCENDENT SELECTOR: Selects all specified elements that are nested anywhere inside a parent element, regardless of how deep they are.  */
+div p {
+    /* Target all <p> inside any <div> */
+    color: blue;
+    background-color: lightcoral;
+}
+
+/* Universal Selector */
+* {              /* Targets every element of HTML */
+    margin: 0;
+    padding: 0;
+}
+
+/* PSEUDO SELECTOR: Selects elements based on their state or position, such as when a user hovers or for specific items in a list.*/
+
+a:visited {
+    color: yellow
+}
+
+a:link {
+    color: green;
+}
+
+a:active {
+    background-color: red;
+}
+
+a:hover {
+    background-color: yellow;
+    color: brown;
+}
+
+#part2 p:first-child {
+    background-color: lightgreen;
+}
+
+#part2 p:nth-child(2){
+    background-color: cyan;
+}
+
+.description::first-line { text-transform: uppercase; } /* Styles only the first line of text */
