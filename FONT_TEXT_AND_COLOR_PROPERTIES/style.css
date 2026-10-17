@@ -1,0 +1,36 @@
+/* Text styling */
+p{
+    font-family: Arial, Helvetica, sans-serif;  /* Defines the font style of the text */
+    font-size: 20px;  /* Sets the font-size of the text(how big or small the text) */
+    font-weight: bold; /* Sets how much bold the text will be */
+    font-style: italic; /* Sets the style of the text such as italic, oblique*/
+}
+
+/* Color and decoration */
+#first{
+    color: blue;  /* Sets the foreground color of the text */
+    background-color: antiquewhite; /* Sets the background color of the text */
+}
+
+#second{
+    text-decoration: underline;   /* adds decorations to the text such as underlines or linethrough*/
+    text-decoration-color: red;  /* sets the color of the decoration */
+    text-decoration-style: wavy;   /* sets the style of the decoration(each decoration has different types of styling) */
+    text-decoration-thickness: 3px;  /* sets the thickness of the decoration */
+}
+
+/* Alignment and spacing */
+#third{
+    text-align: center;  /* Decides the position of the text whether it'll be at center, end, start, left or right */
+    text-transform: uppercase;  /* Controls capitalization such as uppercase, lowwercase, and capitalize */
+    letter-spacing: 2px;  /* Sets the spacing between the letters */
+    word-spacing: 5px;  /* Sets the spacing between the words */
+    line-height: 1.5;  /* Sets the line spacing between the lines */
+    white-space: nowrap;  /* Decides whether the text will wrap to the next line or fit in the same line */
+}
+
+/* Effects */
+#fourth{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  /* Adds shadows to text */
+    text-indent: 50px; /* Add indent to the front of the text */
+}
