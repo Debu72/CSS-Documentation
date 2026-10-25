@@ -1,0 +1,58 @@
+/* CSS Box Model defines how elements are rendered as a rectangular box and how their dimensions are calculated. 
+It consists of four main components.*/
+/* Content, Padding, Border, and Margin. */
+
+div{
+    background-color: skyblue; /* The content */
+    padding: 10px; /* The padding */
+    border: 8px solid blue; /* The border */
+    margin: 10px; /* The margin */
+
+    font-size: 30px;
+}
+
+p{
+    font-size: 14px;
+}
+
+.content_box{
+    height: 200px; 
+    /* The total height of an element is calculated by Height + Top Padding + Bottom Padding + Top Border + Bottom Border + Top Margin + Bottom Margin 
+    Therefore, the total height is, 200 + 10 + 10 + 8 + 8 + 10 + 10 = 256
+    */
+    width: 300px; 
+    /* The total width of an element is calculated by Width + Left Padding + Right Padding + Left Border + Right Border + Left Margin + Right Margin
+    Therefore, the total width is, 300 + 10 + 10 + 8 + 8 + 10 + 10 = 356
+    */
+}
+
+.border_box{
+    box-sizing: border-box; /* With this the element becomes a border-box which includes the padding and border along with it's content in its dimentions*/
+    height: 200px; 
+    /* The total height of a border-box is calculated by Height + Top Margin + Bottom Margin 
+    Therefore, the total height is, 200 + 10 + 10 = 220
+    */
+    width: 300px; 
+    /* The total width of a border-box is calculated by Width + Left Margin + Right Margin
+    Therefore, the total width is, 300 + 10 + 10 = 320
+    */
+}
+
+/* Margin Collapse: When two elements are next to each other vertically their adjacent margins collapse on top of each other and the maximum margin between them are applied */
+
+/* Overflow Property: When the content of a box is too large for it's size it overflows, in order to maintain it it's either clipped or a scroll bar is added with Overflow properties. */
+
+.overflow_scroll{
+    height: 200px;
+    width: 300px;
+    overflow: scroll; /* It adds a scroll bar regardless of the content size to maintain overflow */
+}
+
+.overflow_hidden{
+    height: 200px;
+    width: 300px;
+    overflow: hidden; /* It hides the content that exceed the dimensions of an element but allows scrolling programmably, overflow: clip does the same but doesn't even allows scrolling programmably*/
+}
+
+/* There is overflow: auto which only adds scroll bar when the content exceeds the dimension and overflow: visible which allows the content to overflow
+We can even apply overflow properties to a specific dimention with overflow-x and overflow-y */
