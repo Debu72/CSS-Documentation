@@ -1,0 +1,95 @@
+/* The display property in CSS specifies how an element is displayed in the document flow. It defines whether an element behaves like a block, inline, flex, grid, or even becomes hidden.*/
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+/* display: inline; 
+It only takes the space required for content, leaving the rest space for other elements to come. 
+Setting other dimension properties isn’t like width, height, margin or padding is not allowed in Inline Display. 
+Examples of inline elements: <span>, <a>, <button>, <img>, <input> etc.
+These elements have a default value of display: inline;
+*/
+
+.inline{
+    background-color: yellow;
+
+    display: inline; /* Despite being a block element(<div>), it behaves like an inline element */
+}
+
+/* display: block;
+It takes the full width available across the website page leaving a new line before and after the element. It allows width, height, margin or padding.
+Examples of block elements: <div>, <h1>-<h6>, <p>, <article>, <nav>, <ul>, <ol>, <li> etc.
+These elements have a default value of display: block;
+*/
+
+.block{
+    background-color: beige;
+    height: 60px;
+
+    display: block; /* Despite being an inline element(<span>), it behaves like a block element */
+}
+
+/* display: inline-block;
+Behaves like inline elements but allows to set width and height. */
+
+.inline-block{
+    background-color: palegreen;
+    height: 60px;
+    width: 200px;
+
+    display: inline-block;
+}
+
+/* display: none;
+The element is completely removed from the document flow. It does not take up any space.
+*/
+
+.none{
+    background-color: forestgreen;
+
+    display: none; /* It will be removed from the document flow, so it'll be hidden */
+}
+
+/* visibility: hidden;
+Although not part of the display property family, visibility often comes up in the same discussions, so it’s important to understand the difference.
+
+visibility: hidden; makes an element invisible, but unlike display: none;, the element still takes up space in the layout. */
+
+.hidden{
+    background-color: orange;
+
+    visibility: hidden; /* The page layout does not change, the element is simply not visible to the user. */
+}
+
+/* display: flex;
+This enables flexbox layout model and allows flex properties.
+It has properties like flex-direction, justify-content, align-items, flex-wrap, gap etc. */ 
+
+.flex{
+    background-color: gold;
+
+    display: flex; /* By default, it arranges items horizontally, lines up from the start with no wrapping. */
+    gap: 5px;
+}
+
+/* display: grid;
+This enables a powerful 2 Dimentional grid layout system.
+It has properties like grid-template-rows, grid-template-columns, gap - row-gap and column-gap, */
+
+.grid{
+    background-color: khaki;
+
+    display: grid; /* By default, it arranges items vertically, with one column. */
+    row-gap: 5px;
+}
+
+.item{
+    background-color: maroon;
+    width: 50px;
+    height: 50px;
+}
+
