@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.parent{
+    min-height: 40vh;
+    margin: 10px;
+    border: 2px solid red;
+
+    display: flex; /* Initializes the flex properties to the element */
+    flex-direction: row-reverse;  /* Sets the main axis(row, column, row-reverse, column-reverse) */
+    justify-content: center; /* Aligns itmes along the main axis(center, flex-start, flex-end, space-between, space-around, space-evenly) */
+    align-items: center; /* Aligns itmes along the cross axis(flex-start, center, stretch) */
+    flex-wrap: wrap; /* Decides whether the items should wrap onto another lines or stay on one line */
+    /* align-content: center;  Aligns the multiple cross axis with each other(center, flex-start, flex-end) */
+    /* flex-flow: row-reverse wrap;  sets the main axis and wrap property together (flex-flow: flex-direction wrap) */
+    gap: 10px; /* Sets the gap between items */
+}
+
+.item{
+    width: 90px;
+    height: 90px;
+    background-color: blueviolet;
+    color: yellow;
+    font-size: 25px;
+
+    flex-grow: 1; /* Decides whether the flex items will grow to fill the space(0 - off/ 1 - on, the larger value will take more effect) */
+    flex-shrink: 0; /* Decides whether the flex items will shrink when there is insufficient space(0 - off/ 1 - on, the larger value will take more effect) */
+    flex-basis: auto; /* It's the default size of a flex item before growing/shrinking happens */
+    /* flex: 1 0 auto; shorthand expression for flex-grow flex-shrink flex-basis */
+}
+
+#alignSelf{
+    align-self: flex-end; /* allows the default alignment of the align-items to be overridden for a single item(4 here) */
+}
+
+#order{
+    order: 10; /* it's the visual order of elements which decides the order of elements(lower to higher -- ascending), the default value is 0. */
+}
